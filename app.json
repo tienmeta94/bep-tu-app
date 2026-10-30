@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Đức Hương – Thiết bị nhà bếp",
-    "slug": "bep-tu-app",
+    "slug": "tienmeta94",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -39,6 +39,12 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "owner": "tienmeta94s-team",
+    "extra": {
+      "eas": {
+        "projectId": "f4b814d8-cbd4-4b00-93c8-c839b6958897"
+      }
     }
   }
 }

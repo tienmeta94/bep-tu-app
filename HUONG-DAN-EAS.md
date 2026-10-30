@@ -6,6 +6,18 @@ trực tiếp** trên trang build — điện thoại mở link là cài đượ
 > iPhone: bản cài nội bộ trên iOS bị Apple bắt đăng ký thiết bị (UDID) trước. Hãy thử Android
 > trước; iOS xử lý ở giai đoạn phát hành/TestFlight.
 
+## Đường không cần terminal (build thẳng từ GitHub) — đang dùng
+
+Project Expo đã được liên kết sẵn vào `app.json` (owner + projectId), nên không cần chạy
+`eas-cli` trên máy cá nhân:
+
+1. Mở project trên https://expo.dev → nút **Connect GitHub** → chọn repo
+   `tienmeta94/bep-tu-app` → Authorize.
+2. Vào mục **Builds** → tạo build mới từ GitHub: platform **Android**, profile **preview**,
+   branch **main**.
+3. Build xong (10–20 phút), trang build hiện **QR + nút Install** — quét bằng điện thoại
+   Android để cài. Các lần sau: Muse đẩy code mới lên GitHub, bạn chỉ lặp lại bước 2.
+
 ## Chuẩn bị một lần
 
 1. Tạo tài khoản Expo miễn phí tại https://expo.dev/signup
