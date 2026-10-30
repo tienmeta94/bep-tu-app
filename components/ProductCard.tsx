@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
+import { useRouter } from 'expo-router'
 import MaterialIcons from '@expo/vector-icons/MaterialIcons'
 import type { Product } from '../data/products'
 import { discountPercent, formatVND } from '../lib/format'
@@ -14,13 +15,16 @@ export default function ProductCard({
   width?: number
 }) {
   const { add } = useCart()
+  const router = useRouter()
   const [added, setAdded] = useState(false)
   const [imgFailed, setImgFailed] = useState(false)
   const discount = discountPercent(product.price, product.oldPrice)
+  const openDetail = () =>
+    router.push({ pathname: '/product/[slug]', params: { slug: product.slug } })
 
   return (
     <View style={[styles.card, width ? { width } : { flex: 1 }]}>
-      <View style={styles.imageWrap}>
+      <Pressable style={styles.imageWrap} onPress={openDetail}>
         {product.image && !imgFailed ? (
           <Image
             source={{ uri: product.image }}
@@ -41,11 +45,13 @@ export default function ProductCard({
         <View style={styles.illusBadge}>
           <Text style={styles.illusText}>Ảnh minh họa</Text>
         </View>
-      </View>
+      </Pressable>
       <View style={styles.body}>
-        <Text style={styles.name} numberOfLines={2}>
-          {product.name}
-        </Text>
+        <Pressable onPress={openDetail}>
+          <Text style={styles.name} numberOfLines={2}>
+            {product.name}
+          </Text>
+        </Pressable>
         <View style={styles.metaRow}>
           <MaterialIcons name="star" size={14} color="#f59e0b" />
           <Text style={styles.metaText}>

@@ -89,7 +89,13 @@ export default function HomeScreen() {
       <Text style={styles.sectionTitle}>Danh mục thiết bị</Text>
       <View style={styles.catGrid}>
         {categories.map((c) => (
-          <Pressable key={c.slug} style={styles.catCard} onPress={() => router.push('/products')}>
+          <Pressable
+            key={c.slug}
+            style={styles.catCard}
+            onPress={() =>
+              router.push({ pathname: '/products', params: { cat: c.slug } })
+            }
+          >
             <View style={styles.catIcon}>
               <MaterialIcons name={categoryIcons[c.slug]} size={26} color={colors.primary} />
             </View>

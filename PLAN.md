@@ -36,7 +36,8 @@ Thanh tab dưới cùng 5 mục: **Trang chủ · Sản phẩm · Sửa chữa �
   kiểm tra dữ liệu → tạo phiếu mã `SC…` → gửi qua Zalo / sao chép; phiếu được **lưu trong máy**
   để khách xem lại ở mục "Của tôi".
 - **Giỏ hàng & đặt hàng:** sửa số lượng, tính phí ship (miễn phí từ 2.000.000đ, dưới thì
-  40.000đ — giống web) → form thông tin → tạo đơn mã `BTS…` → gửi Zalo / sao chép.
+  40.000đ — giống web) → form thông tin → tạo đơn mã `DH…` (web đã đổi tiền tố BTS→DH
+  ngày 2026-10-30, app đồng bộ theo web) → gửi Zalo / sao chép.
 - **Của tôi:** danh sách phiếu sửa + đơn hàng đã tạo trên máy này, thông tin shop, giờ mở cửa,
   nút gọi hotline / nhắn Zalo.
 
@@ -48,9 +49,9 @@ Supabase (đăng nhập + đồng bộ phiếu/đơn giữa web và app, shop nh
 | Mốc | Nội dung | Đầu ra kiểm chứng được |
 | --- | --- | --- |
 | A1 — Khung + trang chủ ✅ | Khởi tạo Expo + TS, tab navigation, giao diện cam/xanh navy như web, trang chủ đầy đủ với dữ liệu thật (mẫu) | Chạy bản web của app để Muse tự bấm thử + chụp màn hình; bạn quét QR Expo Go xem trên điện thoại |
-| A2 — Mua sắm | Danh sách + lọc/tìm/sắp xếp, chi tiết sản phẩm, sản phẩm liên quan | Tìm "bep tu doi" không dấu ra đúng hàng; lọc giá chạy đúng |
-| A3 — Giỏ + đặt hàng | Giỏ lưu trên máy, tính ship, form đặt hàng, tạo đơn BTS… mở Zalo soạn sẵn | Đặt thử 1 đơn, nội dung Zalo đúng tổng tiền |
-| A4 — Sửa chữa | Trang dịch vụ, form đặt lịch có validate, phiếu SC… lưu máy, mục "Của tôi" | Đặt thử 1 phiếu, mở lại app vẫn thấy phiếu |
+| A2 — Mua sắm ✅ (code 2026-10-31) | Danh sách + lọc/tìm/sắp xếp, chi tiết sản phẩm, sản phẩm liên quan | Tìm "bep tu doi" không dấu ra đúng hàng; lọc giá chạy đúng |
+| A3 — Giỏ + đặt hàng ✅ (code 2026-10-31) | Giỏ lưu trên máy, tính ship, form đặt hàng, tạo đơn DH… (đồng bộ mã đơn với web — web đã đổi BTS→DH) mở Zalo soạn sẵn, đơn lưu máy xem ở "Của tôi" | Đặt thử 1 đơn, nội dung Zalo đúng tổng tiền |
+| A4 — Sửa chữa ✅ (code 2026-10-31) | Trang dịch vụ, form đặt lịch có validate, phiếu SC… lưu máy, mục "Của tôi" | Đặt thử 1 phiếu, mở lại app vẫn thấy phiếu |
 | Giai đoạn 2 | Nối Supabase (dữ liệu thật, đăng nhập, đồng bộ), EAS Build, đưa lên CH Play / App Store | Cần tài khoản developer của bạn (mục 6) |
 
 ## 4b. Bản cài thẳng qua EAS (đã chuẩn bị 2026-10-30)
