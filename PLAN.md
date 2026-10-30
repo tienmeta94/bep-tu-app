@@ -53,6 +53,14 @@ Supabase (đăng nhập + đồng bộ phiếu/đơn giữa web và app, shop nh
 | A4 — Sửa chữa | Trang dịch vụ, form đặt lịch có validate, phiếu SC… lưu máy, mục "Của tôi" | Đặt thử 1 phiếu, mở lại app vẫn thấy phiếu |
 | Giai đoạn 2 | Nối Supabase (dữ liệu thật, đăng nhập, đồng bộ), EAS Build, đưa lên CH Play / App Store | Cần tài khoản developer của bạn (mục 6) |
 
+## 4b. Bản cài thẳng qua EAS (đã chuẩn bị 2026-10-30)
+
+- Đã có sẵn `eas.json` (profile `preview` xuất APK Android để cài nội bộ) và mã định danh app
+  `vn.duchuong.beptuapp` trong `app.json`; hướng dẫn từng bước ở `HUONG-DAN-EAS.md`.
+- Người dùng cần: tạo tài khoản Expo miễn phí, `npx eas-cli login` + `npx eas-cli init` một lần
+  trên máy mình, sau đó mỗi lần build chỉ một lệnh — trang kết quả của Expo cho QR/link cài
+  trực tiếp lên điện thoại Android. iOS cài nội bộ phải đăng ký UDID nên để giai đoạn TestFlight.
+
 ## 5. Cách chạy thử — nói thẳng giới hạn
 
 - Máy Linux của Muse **không chạy được giả lập Android/iOS** (không có KVM; iOS chỉ có trên
